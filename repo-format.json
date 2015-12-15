@@ -2,7 +2,44 @@
   "esformatter": {
     "allowShebang": true
   },
+  "plugins": [
+    "esformatter-collapse-objects",
+    "esformatter-remove-trailing-commas",
+    "esformatter-eol-last",
+    "esformatter-dot-notation",
+    "esformatter-semicolons",
+    "esformatter-braces",
+    "esformatter-quotes"
+  ],
+  "collapseObjects": {
+    "ObjectExpression": {
+      "maxLineLength": 80,
+      "maxKeys": 4,
+      "maxDepth": 1,
+      "forbidden": [
+        "FunctionExpression"
+      ]
+    },
+    "ArrayExpression": {
+      "maxLineLength": 80,
+      "maxKeys": 4,
+      "maxDepth": 1,
+      "forbidden": [
+        "FunctionExpression"
+      ]
+    }
+  },
 
+  "jsx": {
+    "attrsOnSameLineAsTag": false,
+    "maxAttrsOnTag": 1,
+    "firstAttributeOnSameLine": false,
+    "alignWithFirstAttribute": true
+  },
+  "quotes": {
+    "type": "single",
+    "avoidEscape": true
+  },
   "indent" : {
     "value": "    ",
     "alignComments": true,
@@ -29,7 +66,7 @@
     "FunctionDeclaration": 1,
     "FunctionExpression": 1,
     "IfStatement": 1,
-    "MemberExpression": 1,
+    "MemberExpression": 0,
     "MultipleVariableDeclaration": 1,
     "NewExpression": 1,
     "ObjectExpression": 1,
@@ -250,7 +287,7 @@
       "ArrayPatternComma": 0,
       "ArrowFunctionExpressionArrow": 1,
       "ArrowFunctionExpressionOpeningBrace": 1,
-      "ArrowFunctionExpressionClosingBrace": 0,
+      "ArrowFunctionExpressionClosingBrace": 1,
       "ArgumentComma" : 0,
       "ArgumentList" : 0,
       "AssignmentOperator" : 1,
@@ -320,6 +357,7 @@
       "ObjectPatternClosingBrace": 0,
       "ObjectPatternComma": 0,
       "Property" : 1,
+      "PropertyName" : 1,
       "PropertyValue" : 1,
       "ParameterComma" : 0,
       "ParameterList" : 0,
@@ -393,8 +431,8 @@
       "ForStatementClosingBrace" : 1,
       "ForStatementOpeningBrace" : 1,
       "ForStatementSemicolon" : 1,
-      "FunctionReservedWord": 0,
-      "FunctionName" : 0,
+      "FunctionReservedWord": 1,
+      "FunctionName" : 1,
       "FunctionExpressionOpeningBrace" : 1,
       "FunctionExpressionClosingBrace" : 0,
       "FunctionDeclarationOpeningBrace" : 1,

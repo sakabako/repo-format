@@ -23,7 +23,7 @@ echo $Smudge;
 
 if [ "$Smudge" == '' ]; then
 	git config filter.repoformat.smudge './node_modules/repo-format/node_modules/.bin/esformatter --config ./local-format.json'
-	git config filter.repoformat.clean './node_modules/repo-format/node_modules/.bin/esformatter'
+	git config filter.repoformat.clean './node_modules/repo-format/node_modules/.bin/esformatter --config ./repo-format.json'
 
 	git checkout HEAD -- **
 else
