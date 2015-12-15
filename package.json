@@ -1,0 +1,22 @@
+{
+  "name": "repo-format",
+  "version": "0.0.1",
+  "description": "Commit in one style, work in another.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://sakabako@github.com/sakabako/repo-format.git"
+  },
+  "author": "Stu Kabakoff <sakabako@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sakabako/repo-format/issues"
+  },
+  "homepage": "https://github.com/sakabako/repo-format#readme",
+  "dependencies": {
+    "esformatter": "^0.8.1"
+  }
+}
