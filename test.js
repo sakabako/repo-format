@@ -110,4 +110,8 @@ var xyz = {
 	}
 };
 
+var longer     = require('hello');
+var small      = require('hello');
+var muchlonger = require('hello');
+
 doAThing({one: "two o'clock", three: 4, "5": 6})

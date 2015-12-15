@@ -9,7 +9,8 @@
     "esformatter-dot-notation",
     "esformatter-semicolons",
     "esformatter-braces",
-    "esformatter-quotes"
+    "esformatter-quotes",
+    "esformatter-align"
   ],
   "collapseObjects": {
     "ObjectExpression": {
