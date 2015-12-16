@@ -1,27 +1,29 @@
 # Repo Format
 
-This allows people on a team to each use their own autoformat settings while they work but commit their changes with the same settings. It uses the git attributes file and esformatter to have git reformat your code between the file system and the diff stanges.
+This allows people on a team to each use their own autoformat settings while they work but commit their changes with the same settings. It uses the git attributes file and esformatter to have git reformat your code between the file system and the diff.
 
 Some of the default settings were made to reduce the size of diffs:
 
 * Variable declarations are not aligned, preventing large changes when a long variable is added or removed.
 * Objects with 4 properties are expanded to multi line so you can see the one property that changed.
 
-A set of plugins are automatically installed so you can change these.
+Since you can't install plugins for this yourself (it uses an internal esformatter), a number of them come preinstalled.
 
 ## Installation
 
 `npm install --save-dev repo-format`
 
-The installation script on this repo will automatically add it to its parent.
+repo-format will automatically add smudge and clean filters for .js and .jsx files.
 
 ## Configuration
 
-For options, see the [esformatter default](https://github.com/millermedeiros/esformatter/blob/master/lib/preset/default.json).
+For options, see [esformatter's documentation](https://github.com/millermedeiros/esformatter/blob/master/doc/config.md).
 
 ### Your Repo's Style
 
-Installation will create a file called `.esformatter` if it doesn't already exist. This file will be used for your repo's style.
+Installation will create a file called `.esformatter` if it doesn't already exist. Commit this file, it will be used for your repo's style.
+
+The `.esformatter` file it creates is filled with empty objects to facilitate copy and paste from [esformatter's default](https://github.com/millermedeiros/esformatter/blob/master/lib/preset/default.json).
 
 ### Your Personal Style
 
@@ -33,7 +35,7 @@ _NOTE: You should avoid having the formatter add new lines in your personal conf
 
 ### Built In Plugins
 
-repo-format comes with several esformatter plugins installed. Most but not all are active by default, but that can be changed in the repo's `.esformatter` file. See their indvidual repos for documentation.
+repo-format comes with several esformatter plugins installed. Not all are active by default, but that can be changed in the repo's `.esformatter` file. See their indvidual repos for documentation.
 
 #### Active
 
