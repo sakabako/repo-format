@@ -17,13 +17,13 @@ else
 	echo -e $attributes >> ../../.git/info/attributes
 fi
 
-git config filter.repoformat.smudge './node_modules/repo-format/smudge %f'
-git config filter.repoformat.clean './node_modules/repo-format/clean %f'
+git config filter.repoformat.smudge './node_modules/repo-format/smudge'
+git config filter.repoformat.clean './node_modules/repo-format/node_modules/.bin/esformatter'
 
-if [ -f ../../repo-format.json ]; then
+if [ -f ../../.esformatter ]; then
+	echo 'not replacing existing .esformatter'
 else
-	cp repo-format.json ../../repo-format.json
+	cp default.json ../../.esformatter
 fi
 
 echo 'Installed repo-format, you may need to run git checkout HEAD -- "$(git rev-parse --show-toplevel)" to see the changes.'
-

@@ -2,6 +2,7 @@
   "esformatter": {
     "allowShebang": true
   },
+  "root": true,
   "plugins": [
     "esformatter-collapse-objects",
     "esformatter-remove-trailing-commas",
